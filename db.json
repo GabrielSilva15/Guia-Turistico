@@ -1,0 +1,22 @@
+{
+  "locais": [
+    {
+      "id": "Ih7-Bl7&Hu3)Km8'",
+      "titulo": "Cristo Redentor",
+      "descricao": "Cristo Redentor é uma estátua que retrata Jesus Cristo localizada no topo do morro do Corcovado, a 709 metros acima do nível do mar, com vista para parte considerável da cidade brasileira do Rio de Janeiro.",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/640px-Christ_the_Redeemer_-_Cristo_Redentor.jpg"
+    },
+    {
+      "id": "Lg1*Bj6+Cs1+Gx5,",
+      "titulo": "Cataratas do Iguaçu",
+      "descricao": "Cataratas do Iguaçu (em castelhano: Cataratas del Iguazú) é um conjunto de cerca de 275 quedas de água no rio Iguaçu (na Bacia hidrográfica do rio Paraná), localizada entre o Parque Nacional do Iguaçu, Paraná, no Brasil, e o Parque Nacional Iguazú em Misiones, na Argentina, na fronteira entre os dois países.",
+      "foto": "https://s3.static.brasilescola.uol.com.br/be/2022/10/cataratas-iguacu.jpg"
+    },
+    {
+      "id": "Am8-Fm6-Cc5.Ti5@",
+      "titulo": "Estatua da Liberdade",
+      "descricao": "Estátua da Liberdade, cujo nome oficial é A Liberdade Iluminando o Mundo, é uma escultura neoclássica colossal localizada na ilha da Liberdade no porto de Nova Iorque, nos Estados Unidos",
+      "foto": "https://s2.static.brasilescola.uol.com.br/be/2023/02/grande-escultura-verde-de-uma-mulher-em-pe-erguendo-uma-tocha-conhecida-como-a-estatua-da-liberdade.jpg"
+    }
+  ]
+}

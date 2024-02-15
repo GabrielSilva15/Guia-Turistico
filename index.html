@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header id="head-principal">
+
+        <h1 id="title-guia">Guia Turistico</h1>
+
+    </header>
+
+    
+    <main>
+
+        <div class="adicionar-local">
+            <button id="button-add">Adicionar Novo Local</button>
+        </div>
+
+        <section id="sec-locais">
+            <div class="head-locais">
+                
+                <h1 id="title-locais">Locais Adicionados</h1>
+
+            </div>
+
+            <ul class="lista-locais">
+                
+            </ul>
+            
+        </section>
+
+    </main>
+
+    
+    <div class="container-adicionar">
+
+        <form id="adicionar-local" action="">
+            <span id="title-adicionar">Adicionar Novo Local</span>
+            <div class="inputs-form">
+                <div class="input-local">
+                        <span>Nome:</span>
+                        <input id="nome-local" type="text" placeholder="Digite aqui...">                
+                </div>
+
+                <div class="input-foto">
+                    <span>Url Foto:</span>
+                    <input id="url" type="text" placeholder="Digite aqui...">
+                </div> 
+
+                <div class="input-desc">
+                    <span>Descrição:</span>
+                    <input id="desc" type="text" placeholder="Digite aqui...">
+                </div>  
+            </div>
+            
+            <button id="button-cadastrar">Adicionar</button>
+
+        </form>
+    </div>
+
+
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

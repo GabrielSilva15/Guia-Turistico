@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="verMais.css">
+    <title>Document</title>
+</head>
+<body>  
+
+    <header id="head-edit">
+
+        <h1 id="title-guia">Guia Turistico</h1>
+
+    </header>
+
+    <section class="container">
+    
+        <div class="box-dados">
+            
+            <span id="local-nome"></span>
+
+            <img id="foto-local" src="" alt="">
+                    
+            <p id="desc-local"></p>
+                      
+        </div>
+        
+        <div class="buttons">
+            <img id="buttonEdit" src="ButtonEdit.png" alt="">
+            <img id="buttonExcluir" src="ButtonExcluir.png" alt="">
+        </div>
+        
+    </section>
+
+    <div id="container-edit">
+
+        <form class="form-edit" action="">
+            <span class="title-edit">EDITAR</span>
+            <div class="container-input">
+                <div class="box-input">
+                    <span id="">Nome</span>
+                    <input id="input-edit" type="text" placeholder="Digite aqui...">
+                </div>
+                <div class="box-input">  
+                    <span id="">Url Foto</span>
+                    <input id="input-edit" type="text" placeholder="Digite aqui...">
+                </div>
+                <div class="box-input">
+                    <span id="">Desc</span>
+                    <input id="input-edit" type="text" placeholder="Digite aqui...">
+                </div>
+
+            </div>
+            <button id="button-save">SALVAR</button>
+        </form>
+    </div>
+
+    <div class="container-remover">
+
+        <p>Tem certeza que deseja remover esse local?</p>
+
+        <div class="buttons-remover">
+            <button class="button-remover remover">Remover</button>
+            <button class="button-remover cancelar">Cancelar</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="pageVerMais.js"></script>
+</body>
+</html>
+
+
