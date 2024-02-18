@@ -2,6 +2,7 @@ import  getParameters  from "./getParms.js";
 
 const params= getParameters();
 let isEditing = false; 
+let isExcluding = false;
 
 fetch(`http://localhost:3000/locais/${params.id}`, {
     method: "GET"
@@ -27,54 +28,76 @@ let excluirButton=document.querySelector('#buttonExcluir');
 
 let headEdit=document.querySelector('#head-edit');
 let containerEdit=document.querySelector('.container');
-
-
-editButton.addEventListener('click',()=>{
-    isEditing=true;
-    headEdit.style.filter="blur(10px)";
-    containerEdit.style.filter="blur(10px)";
-    formEdit.style.display='flex';
-    containerRemover.style.display ='none';
-    formEdit.addEventListener('submit',(e)=>{
-
-        let nomeLocal=document.querySelector('#nome-edit').value;
-        let descLocal=document.querySelector('#desc-edit').value;
-        let urlLocal=document.querySelector('#link-foto').value;
-        
-        const upObjt={
-            "titulo":nomeLocal,
-            "descricao":descLocal,
-            "foto":urlLocal,
-        }
-        
-        e.preventDefault();
-        
-        updateData(upObjt);
-        
-    })
-    
-    
-})
-
 const containerRemover=document.querySelector('.container-remover');
 const buttonRemover=document.querySelector('.remover');
 const buttonCancelar=document.querySelector('.cancelar');
 containerRemover.style.display ='none';
 
-excluirButton.addEventListener('click',()=>{
-    if(isEditing === false){
-        containerRemover.style.display ='flex';
-        headEdit.style.filter="blur(10px)";
-        containerEdit.style.filter="blur(10px)";
-        formEdit.style.display='none'
-        buttonRemover.addEventListener('click',()=>{     
-            deleteData();
+let main=document.querySelector('main');
+let buttonVoltar = document.querySelector('#button-voltar');
+
+
+editButton.addEventListener('click',()=>{
+    isEditing=true;
+    if(isExcluding === false){
+        formEdit.style.display='flex';
+        containerRemover.style.display ='none';
+        main.style.filter="blur(10px)";
+        
+        buttonVoltar.addEventListener('click',()=>{
+            formEdit.style.display='none';
+            main.style.filter="none";
+            isEditing = false; 
+            isExcluding = false;
         });
-        buttonCancelar.addEventListener('click',()=>{
-            window.location = `pageVerMais.html?id=${params.id}`
-        })
+        formEdit.addEventListener('submit',(e)=>{
+            let nomeLocal=document.querySelector('#nome-edit').value;
+            let descLocal=document.querySelector('#desc-edit').value;
+            let urlLocal=document.querySelector('#link-foto').value;
+            
+            const upObjt={
+                "titulo":nomeLocal,
+                "descricao":descLocal,
+                "foto":urlLocal,
+            }
+            e.preventDefault();       
+            updateData(upObjt);
+        })  
     }
 })
+
+
+excluirButton.addEventListener('click',()=>{
+    isExcluding=true;
+        if(isEditing === false){
+            main.style.filter="blur(10px)";           
+            formEdit.style.display='none';
+            containerRemover.style.display ='flex';
+            buttonRemover.addEventListener('click',()=>{     
+                deleteData();
+            });
+            buttonCancelar.addEventListener('click',()=>{
+                // window.location = `pageVerMais.html?id=${params.id}`;
+                main.style.filter="none";
+                containerRemover.style.display ='none';
+                isEditing = false; 
+                isExcluding = false;
+            })
+            
+        }
+})
+
+
+
+
+
+    
+
+
+
+
+    
+
 
 
 

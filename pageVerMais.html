@@ -8,32 +8,36 @@
 </head>
 <body>  
 
-    <header id="head-edit">
+    <main>
 
-        <h1 id="title-guia">Guia Turistico</h1>
-
-    </header>
-
-    <section class="container">
+        <header class="blurEffect">
     
-        <div class="box-dados">
+            <h1 id="title-guia">Guia Turistico</h1>
+    
+        </header>
+    
+        <section class="container blurEffect">
+        
+            <div class="box-dados">
+                
+                <span id="local-nome"></span>
+    
+                <img id="foto-local" src="" alt="">
+                        
+                <p id="desc-local"></p>
+                          
+            </div>
             
-            <span id="local-nome"></span>
+            <div class="buttons">
+                <img id="buttonEdit" src="ButtonEdit.png" alt="">
+                <img id="buttonExcluir" src="ButtonExcluir.png" alt="">
+            </div>
+            
+        </section>
 
-            <img id="foto-local" src="" alt="">
-                    
-            <p id="desc-local"></p>
-                      
-        </div>
-        
-        <div class="buttons">
-            <img id="buttonEdit" src="ButtonEdit.png" alt="">
-            <img id="buttonExcluir" src="ButtonExcluir.png" alt="">
-        </div>
-        
-    </section>
+    </main>
 
-    <div id="container-edit">
+    <div class="container-edit">
 
         <form class="form-edit" action="">
             <span class="title-edit">EDITAR</span>
@@ -50,9 +54,12 @@
                     <span id="">Desc</span>
                     <input id="input-edit" type="text" placeholder="Digite aqui...">
                 </div>
-
+                
             </div>
             <button id="button-save">SALVAR</button>
+            <div class="button-voltar">
+                <img id="button-voltar" src="Button - Voltar.png" alt="">
+            </div>
         </form>
     </div>
 

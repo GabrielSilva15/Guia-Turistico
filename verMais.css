@@ -22,6 +22,11 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 #title-guia{
     font-size: 3em;
     color: white;
@@ -142,7 +147,7 @@ body{
 }
 
 #button-save{
-    width: 90%;
+    width: 70%;
     height: 30px;
     margin: 15px 0px;
     border-radius: 30px;
@@ -154,7 +159,7 @@ body{
     font-weight: bold;
 }
 
-#container-edit{
+.container-edit{
     position: fixed;
     left: 50%;
     top: 50%;
@@ -202,4 +207,17 @@ body{
 
 .cancelar{
     background-color: red;
+}
+
+.button-voltar{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.button-voltar img{
+    cursor: pointer;
+    width: 2vw;
+    height: 3vh;
+    margin: 10px;
 }
